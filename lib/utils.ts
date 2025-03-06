@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export function validateSet(value: string, setValue: (value: any) => void) {
   value = value.replace(/[^0-9.,]/, '')
   
-  let onlyPoint = value.match(/[,]/g)
+  const onlyPoint = value.match(/[,]/g)
   if (onlyPoint) {
       value = value.slice(0, value.length - 1)
   }
